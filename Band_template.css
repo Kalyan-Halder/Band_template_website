@@ -228,7 +228,7 @@ span.yes {
 .contact {
   background-image: url(Contact03.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .contact .greet h2 {
