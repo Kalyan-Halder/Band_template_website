@@ -1,0 +1,384 @@
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+body {
+  background-color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+}
+.wrapper {
+  display: grid;
+}
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--dark);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+.topnav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: var(--dark);
+}
+.search {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 50%;
+  float: right;
+}
+.btn_toggol {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-between;
+  top: 1rem;
+  right: 1.1rem;
+}
+.btn_toggol .bar {
+  display: block;
+  width: 25px;
+  margin: 2px;
+  height: 4px;
+  align-self: center;
+  background-color: white;
+  border: 1px solid white;
+}
+.search::after {
+  content: "";
+  clear: both;
+}
+.topnav ul li {
+  list-style-type: none;
+}
+.topnav ul li a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: var(--light);
+  font-size: 1.2rem;
+  padding: 0.9rem 0;
+}
+.topnav ul li a:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.cover {
+  margin-top: 0px;
+  height: 700px;
+  width: 100%;
+  background-image: url(5.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.cover h2 {
+  font-size: 5rem;
+  color: var(--light);
+}
+.cover p {
+  font-size: 1.5rem;
+  color: var(--light);
+}
+
+.article {
+  padding: 5% 15%;
+  margin-bottom: 0;
+}
+.article h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.article p {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.boxes {
+  margin-top: 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  padding: 5% 10%;
+  margin-bottom: 0;
+}
+.box {
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+.box:hover {
+  border: 1px solid var(--dark);
+}
+.box h3 {
+  font-size: 2rem;
+  padding: 0.3rem;
+}
+
+.About-US {
+  background-color: var(--dark);
+  padding: 10px;
+  padding-bottom: 10%;
+}
+.About-US h1 {
+  margin-top: 6%;
+  text-align: center;
+  color: var(--light);
+}
+.About-US p {
+  text-align: center;
+  color: var(--light);
+}
+.notice ul {
+  margin-top: 6%;
+}
+.About-US .notice li {
+  padding: 5px;
+  border-bottom: 1px solid gray;
+  list-style-type: none;
+  background-color: var(--light);
+  text-align: left;
+  margin: auto;
+  display: block;
+  height: 4rem;
+  font-size: 1.2rem;
+}
+.notice {
+  margin-bottom: 5%;
+}
+span.not {
+  background-color: red;
+  padding: 2px;
+}
+span.yes {
+  background-color: green;
+  padding: 2px;
+}
+
+.cards {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  justify-content: space-around;
+}
+.card {
+  padding: 1rem;
+  background-color: var(--light);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  text-align: center;
+  padding: 0.4rem;
+}
+.card > .btn:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+  border-radius: 3px;
+}
+.card p {
+  padding: 1rem;
+  color: var(--dark);
+  text-align: justify;
+}
+.card p.date {
+  text-align: center;
+}
+.btn {
+  background-color: var(--dark);
+}
+.btn {
+  text-decoration: none;
+  color: var(--light);
+  background-color: var(--dark);
+  padding: 0.5rem;
+  align-self: flex-end;
+  margin-top: auto;
+}
+.greet {
+  padding: 5%;
+}
+.contact {
+  background-image: url(Contact03.jpg);
+  background-position: center;
+  background-size: contain;
+}
+.contact .greet h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.contact .greet h3 {
+  text-align: center;
+}
+
+.Contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5%;
+}
+.location li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.form {
+  padding: 5%;
+}
+.location {
+  padding: 5%;
+}
+input {
+  font-size: 1.5rem;
+  margin: 2px;
+  width: 100%;
+  height: 35px;
+}
+.btn1 {
+  height: 50px;
+}
+
+.end-cover {
+  margin-top: 0;
+  height: 500px;
+  width: 100%;
+  background-image: url(2.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: lucida;
+}
+.end-cover h1 {
+  padding: 0 1rem;
+  font-size: 4rem;
+}
+.end-cover h2 {
+  padding: 0 1rem;
+  font-size: 2.5rem;
+}
+
+.social a {
+  display: block;
+  text-decoration: none;
+  color: rgb(99, 98, 98);
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+footer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+  .topnav {
+    grid-template-columns: 2fr 1fr;
+  }
+  .search {
+    width: 100%;
+  }
+  .Contact-form {
+    grid-template-columns: 1fr;
+  }
+  .end-cover {
+    justify-content: start;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .topnav {
+    grid-template-columns: 1fr;
+  }
+
+  .search {
+    height: 50px;
+  }
+  .box {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .topnav {
+    position: static;
+  }
+  .topnav ul {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+  .topnav .Search {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 305px;
+    border: 2px solid var(--dark);
+  }
+  .navbar-links {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+
+  .btn_toggol {
+    display: flex;
+  }
+  .boxes {
+    padding: 10px;
+  }
+  .box {
+    padding: 10px;
+  }
+  .location li {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .end-cover {
+    justify-content: start;
+    align-items: center;
+    font-family: lucida;
+  }
+  .end-cover h1 {
+    padding: 0 1rem;
+    font-size: 3rem;
+  }
+  .end-cover h2 {
+    padding: 0 2rem;
+    font-size: 3rem;
+  }
+}
