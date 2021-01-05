@@ -229,6 +229,7 @@ span.yes {
   background-image: url(Contact03.jpg);
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .contact .greet h2 {
   text-align: center;
