@@ -1,4 +1,5 @@
 /* Color for root */
+/* Using variable for colore */
 :root {
   --primary: #ddd;
   --dark: #333;
