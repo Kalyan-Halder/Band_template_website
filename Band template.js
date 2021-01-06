@@ -12,3 +12,18 @@ document.getElementById("btn_toggol").addEventListener("click",function(){
        search1.style.display="none"
    }
    })
+
+   var more = document.getElementById('more');
+   var dot = document.getElementById('dot');
+   function read(){
+       if(more.style.display=="none"){
+           more.style.display="inline";
+           dot.style.display="none";
+           document.getElementById("read_more").innerHTML="Read Less <<" ;
+       }
+       else {
+            more.style.display="none";
+            dot.style.display="inline";
+            document.getElementById("read_more").innerHTML="Read More >>" ; 
+       }
+   }

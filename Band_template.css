@@ -30,6 +30,7 @@ img {
   position: fixed;
   width: 100%;
   top: 0px;
+  z-index: 30;
 }
 
 .topnav ul {
@@ -107,23 +108,43 @@ img {
 .article {
   padding: 5%;
   margin-bottom: 0;
-  background-image: url(article_cover.jpg);
+  background-image: url(3.jpg);
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 .article h1 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 3.9rem;
   margin-bottom: 2rem;
+  color: rgb(255, 255, 255);
 }
 .article p {
   text-align: justify;
-  color: var(--light);
+  color: rgb(255, 255, 255);
   padding: 5%;
   font-size: 1.5rem;
   font-weight: bold;
-  text-shadow: 2px 2px 2px black;
   line-height: 1.5rem;
+}
+.article #dot {
+  display: none;
+}
+.article .read_more {
+  display: none;
+  padding: 0.3rem;
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.article .read_more:hover {
+  color: var(--dark);
+  background-color: var(--light);
 }
 
 .boxes {
@@ -329,9 +350,6 @@ footer {
   .end-cover {
     justify-content: start;
   }
-}
-
-@media only screen and (max-width: 750px) {
   .topnav {
     grid-template-columns: 1fr;
   }
@@ -364,7 +382,20 @@ footer {
     position: absolute;
     width: 100%;
   }
-
+  .article #dot {
+    display: inline;
+  }
+  .article .more {
+    display: none;
+  }
+  .article .read_more {
+    display: inline;
+  }
+  .article p {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 15px;
+  }
   .btn_toggol {
     display: flex;
   }
@@ -400,5 +431,10 @@ footer {
   }
   .end-cover h1 {
     font-size: 2.2rem;
+  }
+  .boxes {
+    padding: 5px;
+    grid-gap: 5px;
+    background-color: var(--dark);
   }
 }
