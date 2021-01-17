@@ -28,4 +28,14 @@ document.getElementById("btn_toggol").addEventListener("click",function(){
          document.getElementById("read_more").innerHTML="Read More >>" ; 
     }
 }
-  
+let i=5;
+
+const bg= document.querySelector(".cover");
+setInterval(() => {
+     i++;
+     bg.style.backgroundImage ='url(' + (i) + '.jpg)' ;
+     
+     if(i==12){
+         i=5;
+     }
+}, 4000);

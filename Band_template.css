@@ -88,6 +88,7 @@ img {
   height: 700px;
   width: 100%;
   background-image: url(5.jpg);
+  transition: all 2s;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -108,7 +109,7 @@ img {
 .article {
   padding: 5%;
   margin-bottom: 0;
-  background-image: url(3.jpg);
+  background-color: gray;
   background-position: center;
   background-size: cover;
   position: relative;
